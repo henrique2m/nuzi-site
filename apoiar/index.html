@@ -44,13 +44,15 @@
       <section aria-labelledby="pix">
         <h2 id="pix" style="font-size: 32px">Pix</h2>
         <div class="pix">
-          <div class="qr" id="qr">QR Code do Pix em breve</div>
+          <div class="qr"><img src="../assets/img/pix-qr.svg" width="216" height="216" alt="QR Code do Pix da Nuzi, sem valor fixo." /></div>
           <div style="display: flex; flex-direction: column; gap: 14px">
-            <p>Aponte a câmera do app do seu banco para o QR, ou copie a chave aleatória:</p>
+            <p>Aponte a câmera do app do seu banco para o QR, use o Pix copia e cola ou copie a chave aleatória:</p>
             <div class="key">
-              <code id="chave">3b3db4d4-4b7e-4364-8163-0eb46efd5804</code>
+              <button type="button" class="btn btn-primary" id="copiar-codigo">Copiar Pix copia e cola</button>
               <button type="button" class="btn" id="copiar">Copiar chave</button>
             </div>
+            <code id="chave">3b3db4d4-4b7e-4364-8163-0eb46efd5804</code>
+            <code id="codigo" hidden>00020126580014br.gov.bcb.pix01363b3db4d4-4b7e-4364-8163-0eb46efd58045204000053039865802BR5916HENRIQUE MOREIRA6006PALMAS62070503***63041F10</code>
             <p id="copiado" role="status" style="font-size: 14px; color: var(--muted)"></p>
             <p style="font-size: 14px; color: var(--muted)">
               O QR não tem valor fixo: você escolhe quanto mandar. O app do banco mostra o nome de quem recebe antes de
@@ -85,17 +87,23 @@
       </div>
     </footer>
     <script>
-      document.getElementById('copiar').addEventListener('click', function () {
-        var chave = document.getElementById('chave').textContent;
+      function copiar(id, feito) {
+        var texto = document.getElementById(id).textContent;
         var aviso = document.getElementById('copiado');
-        navigator.clipboard.writeText(chave).then(
+        navigator.clipboard.writeText(texto).then(
           function () {
-            aviso.textContent = 'Chave copiada. Obrigado pelo vale-token!';
+            aviso.textContent = feito + ' Obrigado pelo vale-token!';
           },
           function () {
             aviso.textContent = 'Não deu para copiar sozinho: selecione a chave e copie.';
           },
         );
+      }
+      document.getElementById('copiar').addEventListener('click', function () {
+        copiar('chave', 'Chave copiada.');
+      });
+      document.getElementById('copiar-codigo').addEventListener('click', function () {
+        copiar('codigo', 'Pix copia e cola copiado: cole no app do banco.');
       });
     </script>
   </body>
