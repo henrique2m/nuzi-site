@@ -21,15 +21,15 @@
 }
 @media (prefers-color-scheme: dark) {
   :root {
-    --bg: #1a1210;
-    --surface: #241a17;
-    --sunken: #140e0c;
+    --bg: #1c1d1f;
+    --surface: #26272a;
+    --sunken: #151618;
     --ink: #f7f1ec;
-    --muted: #bca9a2;
-    --line: #3a2c27;
-    --line-strong: #54433c;
+    --muted: #aeb1b6;
+    --line: #36383c;
+    --line-strong: #4d5056;
     --brick-ink: #e8907f;
-    --brick-wash: #4a221c;
+    --brick-wash: #3d2a27;
     --focus: #8ab4f8;
     color-scheme: dark;
   }
@@ -231,7 +231,7 @@ section {
 /* ---------- Padrão de nomes ---------- */
 .names {
   /* Sempre escuro, nos dois temas: as cores dos segmentos foram escolhidas para ele. */
-  background: #1e1412;
+  background: #1c1d1f;
   color: #f7f1ec;
   border-radius: 20px;
   padding: 32px;
@@ -251,7 +251,7 @@ section {
   color: #efe6df;
 }
 .names .muted {
-  color: #bca9a2;
+  color: #aeb1b6;
 }
 
 /* ---------- Grades de cartões ---------- */
