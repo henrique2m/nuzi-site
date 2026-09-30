@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Nuzi — o arquivo pessoal dos seus artefatos</title>
+    <meta
+      name="description"
+      content="Extensão gratuita para o Chrome que organiza seus artefatos em pastas e tags, gravando a organização no próprio nome. Sem servidor, sem conta."
+    />
+    <meta property="og:title" content="Nuzi" />
+    <meta property="og:description" content="O arquivo pessoal dos seus artefatos do claude.ai." />
+    <meta property="og:image" content="assets/img/og.png" />
+    <link rel="icon" href="assets/img/favicon-32.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,500&display=swap" />
+    <link rel="stylesheet" href="assets/site.css" />
+  </head>
+  <body>
+    <header class="top">
+      <div class="wrap">
+        <a class="brand" href="./"><img src="assets/img/logo.svg" alt="" /> Nuzi</a>
+        <nav aria-label="Páginas">
+          <a href="#funcionalidades">Funcionalidades</a>
+          <a href="privacidade/">Privacidade</a>
+          <a href="marca/">Marca</a>
+          <a href="apoiar/">Apoiar</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="wrap">
+      <section class="hero" aria-labelledby="titulo">
+        <div style="display: flex; flex-direction: column; gap: 22px">
+          <span class="eyebrow">Extensão gratuita para o Chrome</span>
+          <h1 id="titulo">O arquivo pessoal dos seus artefatos do claude.ai.</h1>
+          <p class="lede">
+            Dezenas de artefatos e projetos numa lista só? A Nuzi dá a cada um um lugar e uma etiqueta: projetos,
+            subpastas e tags, gravados no próprio nome.
+          </p>
+          <div class="actions">
+            <a class="btn btn-primary" aria-disabled="true" role="link">Em breve na Chrome Web Store</a>
+            <a class="btn" href="#como-funciona">Como funciona</a>
+          </div>
+          <p class="note">Sem servidor, sem conta, nada sai do seu navegador.</p>
+        </div>
+        <img
+          class="shot"
+          src="assets/screens/01-lista.png"
+          width="1280"
+          height="800"
+          alt="A Nuzi aberta: pastas à esquerda (Atlas, Estudos, Orbita) e os itens da pasta Atlas à direita."
+        />
+      </section>
+
+      <section id="como-funciona" aria-labelledby="como">
+        <span class="eyebrow">Como funciona</span>
+        <h2 id="como" style="font-size: 40px">A organização mora no nome</h2>
+        <p class="lede">
+          Em vez de um banco de dados, a Nuzi escreve a pasta no nome do artefato. Por isso ela sincroniza entre
+          dispositivos e continua valendo mesmo sem a extensão.
+        </p>
+        <div class="names" role="figure" aria-label="Exemplos de nomes organizados">
+          <span
+            ><span class="seg-p">Projeto</span> / <span class="seg-s">Subpasta</span> /
+            <span class="seg-t">Título</span> <span class="muted">#tag</span></span
+          >
+          <span
+            ><span class="seg-p">Atlas</span> / <span class="seg-s">Pesquisa</span> /
+            <span class="seg-t">Mapa de concorrentes</span> <span class="muted">#revisão</span></span
+          >
+          <span><span class="seg-p">Orbita</span> / <span class="seg-t">Painel de vendas</span></span>
+          <span class="muted">Anotações da reunião → sem pasta</span>
+        </div>
+      </section>
+
+      <section id="funcionalidades" aria-labelledby="func">
+        <span class="eyebrow">Funcionalidades</span>
+        <h2 id="func" style="font-size: 40px">Tudo o que a lista não faz</h2>
+        <div class="cards">
+          <div class="card">
+            <h3>Encontrar</h3>
+            <ul>
+              <li>Artefatos publicados e projetos do Claude Design juntos</li>
+              <li>Árvore de pastas com contagens</li>
+              <li>Busca sem acentos, filtros por tipo e tag</li>
+              <li>Lista ou grade com prévias</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Organizar</h3>
+            <ul>
+              <li>Mover vários itens de uma vez</li>
+              <li>Arrastar direto para a pasta</li>
+              <li>Renomear uma pasta inteira</li>
+              <li>Descrição, ícone e cor por pasta</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Com segurança</h3>
+            <ul>
+              <li>Pré-visualização "nome atual → nome novo"</li>
+              <li>Um item por vez, conferido depois</li>
+              <li>Histórico com desfazer</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Do seu jeito</h3>
+            <ul>
+              <li>Modal, painel lateral ou janela própria</li>
+              <li>Tema claro e escuro</li>
+              <li>Teclado completo e leitores de tela</li>
+            </ul>
+          </div>
+        </div>
+        <div class="shots">
+          <figure>
+            <img class="shot" src="assets/screens/02-grade.png" width="1280" height="800" alt="Visualização em grade, no tema escuro, com a prévia de cada artefato." />
+            <figcaption>Grade com prévias, no tema escuro.</figcaption>
+          </figure>
+          <figure>
+            <img class="shot" src="assets/screens/03-mover.png" width="1280" height="800" alt="Diálogo Mover 3 itens mostrando o nome atual e o nome novo de cada item antes de renomear." />
+            <figcaption>Antes de gravar, você vê o nome atual e o nome novo.</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section aria-labelledby="priv">
+        <span class="eyebrow">Privacidade</span>
+        <h2 id="priv" style="font-size: 40px">Nada sai do seu navegador</h2>
+        <div class="cards">
+          <div class="card"><h3>Sem servidor</h3><p>Sem conta, sem telemetria, sem anúncios.</p></div>
+          <div class="card"><h3>Sem credenciais</h3><p>A Nuzi nunca lê nem guarda senhas, cookies ou tokens.</p></div>
+          <div class="card"><h3>Só o nome</h3><p>Ela altera apenas o nome dos seus artefatos, e só quando você confirma.</p></div>
+        </div>
+        <p><a href="privacidade/">Leia a política de privacidade completa</a></p>
+      </section>
+
+      <section aria-labelledby="apoio">
+        <span class="eyebrow">Apoio</span>
+        <h2 id="apoio" style="font-size: 40px">Aceitamos vale-token</h2>
+        <p class="lede">A Nuzi é gratuita. Se ela te poupou tempo, seu vale-token vira tokens de IA para criarmos coisas incríveis.</p>
+        <p><a class="btn btn-primary" href="apoiar/">Mandar um vale-token</a></p>
+      </section>
+    </main>
+
+    <footer>
+      <div class="wrap">
+        <nav aria-label="Rodapé">
+          <a href="privacidade/">Privacidade</a>
+          <a href="termos/">Termos de uso</a>
+          <a href="marca/">Marca</a>
+          <a href="apoiar/">Apoiar</a>
+          <a href="https://github.com/henrique2m/nuzi-site/issues">Suporte e ideias</a>
+        </nav>
+        <p>A Nuzi é um projeto independente, sem vínculo com a Anthropic. Claude e claude.ai são marcas da Anthropic.</p>
+        <p>© 2026 Henrique Moreira</p>
+      </div>
+    </footer>
+  </body>
+</html>

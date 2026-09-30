@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Apoiar a Nuzi — vale-token</title>
+    <meta name="description" content="Mande um vale-token para a Nuzi: ele vira tokens de IA para criarmos coisas incríveis." />
+    <link rel="icon" href="../assets/img/favicon-32.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,500&display=swap" />
+    <link rel="stylesheet" href="../assets/site.css" />
+  </head>
+  <body>
+    <header class="top">
+      <div class="wrap">
+        <a class="brand" href="../"><img src="../assets/img/logo.svg" alt="" /> Nuzi</a>
+        <nav aria-label="Páginas">
+          <a href="../#funcionalidades">Funcionalidades</a>
+          <a href="../privacidade/">Privacidade</a>
+          <a href="../marca/">Marca</a>
+          <a href="./" aria-current="page">Apoiar</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="wrap">
+      <section aria-labelledby="titulo">
+        <span class="eyebrow">Apoiar a Nuzi</span>
+        <h1 id="titulo" style="font-size: clamp(40px, 6vw, 60px)">Aceitamos vale-token.</h1>
+        <p class="lede">
+          Nada de cafezinho: aqui o benefício é de quem vive de IA. A Nuzi é gratuita e continua assim. Se ela te poupou
+          tempo, <strong>seu vale-token vira tokens de IA para criarmos coisas incríveis</strong>: primeiro a própria
+          Nuzi, depois os próximos projetos.
+        </p>
+        <div class="tiers" aria-label="Valores sugeridos">
+          <span class="tier">R$ 5 · vale-token</span>
+          <span class="tier">R$ 15 · vale-token família</span>
+          <span class="tier">R$ 42 · vale-token galáctico</span>
+          <span class="tier">Valor livre · você manda no RH</span>
+        </div>
+      </section>
+
+      <section aria-labelledby="pix">
+        <h2 id="pix" style="font-size: 32px">Pix</h2>
+        <div class="pix">
+          <div class="qr" id="qr">QR Code do Pix em breve</div>
+          <div style="display: flex; flex-direction: column; gap: 14px">
+            <p>Aponte a câmera do app do seu banco para o QR, ou copie a chave aleatória:</p>
+            <div class="key">
+              <code id="chave">3b3db4d4-4b7e-4364-8163-0eb46efd5804</code>
+              <button type="button" class="btn" id="copiar">Copiar chave</button>
+            </div>
+            <p id="copiado" role="status" style="font-size: 14px; color: var(--muted)"></p>
+            <p style="font-size: 14px; color: var(--muted)">
+              O QR não tem valor fixo: você escolhe quanto mandar. O app do banco mostra o nome de quem recebe antes de
+              confirmar.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section aria-labelledby="regras">
+        <h2 id="regras" style="font-size: 32px">As regras da casa</h2>
+        <div class="prose">
+          <ul>
+            <li>Nenhuma função da Nuzi depende de apoio.</li>
+            <li>A extensão pede só uma vez, depois de muitos itens organizados, e nunca mais.</li>
+            <li>De tempos em tempos, contamos o que os tokens já criaram.</li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="wrap">
+        <nav aria-label="Rodapé">
+          <a href="../privacidade/">Privacidade</a>
+          <a href="../termos/">Termos de uso</a>
+          <a href="../marca/">Marca</a>
+          <a href="https://github.com/henrique2m/nuzi-site/issues">Suporte e ideias</a>
+        </nav>
+        <p>A Nuzi é um projeto independente, sem vínculo com a Anthropic.</p>
+        <p>© 2026 Henrique Moreira</p>
+      </div>
+    </footer>
+    <script>
+      document.getElementById('copiar').addEventListener('click', function () {
+        var chave = document.getElementById('chave').textContent;
+        var aviso = document.getElementById('copiado');
+        navigator.clipboard.writeText(chave).then(
+          function () {
+            aviso.textContent = 'Chave copiada. Obrigado pelo vale-token!';
+          },
+          function () {
+            aviso.textContent = 'Não deu para copiar sozinho: selecione a chave e copie.';
+          },
+        );
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,36 @@
+name: Algo deu errado
+description: Relate um problema na extensão Nuzi.
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Obrigado por avisar! Não cole aqui títulos, links ou conteúdo de artefatos que você não quer tornar públicos: esta página é aberta.
+  - type: textarea
+    id: oque
+    attributes:
+      label: O que aconteceu?
+      description: Conte o que você fez e o que apareceu na tela.
+    validations:
+      required: true
+  - type: textarea
+    id: esperado
+    attributes:
+      label: O que você esperava?
+    validations:
+      required: true
+  - type: dropdown
+    id: modo
+    attributes:
+      label: Onde a Nuzi estava aberta?
+      options:
+        - Modal na página
+        - Painel lateral
+        - Janela própria
+        - Não sei
+  - type: input
+    id: versoes
+    attributes:
+      label: Versões
+      description: A versão da Nuzi (em chrome://extensions) e a do Chrome.
+      placeholder: "Nuzi 1.0.0, Chrome 130"

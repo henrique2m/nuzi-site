@@ -1,0 +1,14 @@
+name: Tenho uma ideia
+description: Sugira uma função ou melhoria para a Nuzi.
+labels: ["ideia"]
+body:
+  - type: textarea
+    id: ideia
+    attributes:
+      label: Qual é a ideia?
+    validations:
+      required: true
+  - type: textarea
+    id: porque
+    attributes:
+      label: Que problema ela resolve para você?

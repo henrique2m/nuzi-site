@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Política de privacidade — Nuzi</title>
+    <meta name="description" content="O que a extensão Nuzi lê, guarda e altera, e o que ela nunca faz." />
+    <link rel="icon" href="../assets/img/favicon-32.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,500&display=swap" />
+    <link rel="stylesheet" href="../assets/site.css" />
+  </head>
+  <body>
+    <header class="top">
+      <div class="wrap">
+        <a class="brand" href="../"><img src="../assets/img/logo.svg" alt="" /> Nuzi</a>
+        <nav aria-label="Páginas">
+          <a href="../#funcionalidades">Funcionalidades</a>
+          <a href="./" aria-current="page">Privacidade</a>
+          <a href="../marca/">Marca</a>
+          <a href="../apoiar/">Apoiar</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="wrap">
+      <article class="prose" aria-labelledby="titulo">
+        <span class="eyebrow">Última atualização: 30 de setembro de 2026</span>
+        <h1 id="titulo" style="font-size: 48px">Política de privacidade</h1>
+        <p>
+          A Nuzi é uma extensão para o Google Chrome que organiza os artefatos do claude.ai e os projetos do Claude
+          Design em pastas e tags. Esta política explica quais dados a extensão usa, onde ficam e o que ela
+          <strong>não</strong> faz com eles.
+        </p>
+
+        <h2>Resumo</h2>
+        <ul>
+          <li>A Nuzi <strong>não tem servidor</strong>. Nenhum dado seu é enviado ao desenvolvedor nem a terceiros.</li>
+          <li>A Nuzi <strong>não coleta</strong> senhas, cookies, tokens de sessão, conversas nem o conteúdo dos seus artefatos.</li>
+          <li>Tudo o que a extensão guarda fica <strong>no seu navegador</strong> e some quando você a remove.</li>
+        </ul>
+
+        <h2>O que a extensão lê</h2>
+        <p>
+          Quando você abre a Nuzi numa página do claude.ai, a extensão pede ao próprio claude.ai, com a sessão que já
+          está aberta no seu navegador, a lista dos seus artefatos publicados e projetos do Claude Design: ID, título,
+          tipo, datas, link e miniatura. Esses dados só servem para montar a tela de organização e não saem do seu
+          computador.
+        </p>
+        <p>
+          Para essas chamadas funcionarem, a extensão reaproveita os cabeçalhos de identificação que o próprio app do
+          claude.ai envia: versão do cliente, ID da organização da sua conta e ID da sessão de uso do app. Uma lista
+          fixa define quais cabeçalhos podem ser guardados, e qualquer nome ligado a credenciais (cookie, authorization,
+          token, secret, session-key) é descartado. Esses cabeçalhos ficam na memória da sessão do navegador e são
+          apagados quando ele fecha.
+        </p>
+
+        <h2>O que a extensão altera</h2>
+        <p>
+          A Nuzi só altera o <strong>nome</strong> dos seus artefatos e projetos, e só depois que você confirma uma
+          pré-visualização com o nome atual e o nome novo. A alteração é feita pelo próprio claude.ai, do mesmo jeito que
+          renomear pela interface dele.
+        </p>
+
+        <h2>O que a extensão guarda no seu navegador</h2>
+        <ul>
+          <li><strong>Estrutura de pastas:</strong> pastas vazias, descrições, ícones e cores que você escolheu.</li>
+          <li><strong>Histórico de renomeações:</strong> até 50 lotes com ID, nome antigo e nome novo, para você desfazer.</li>
+          <li><strong>Ícones por item:</strong> o ícone que você escolheu para cada item.</li>
+          <li><strong>Preferências:</strong> visualização, ordenação, última pasta aberta e filtros.</li>
+          <li><strong>Contagem de apoio:</strong> quantos itens você já organizou e se o convite para apoiar já apareceu, para mostrá-lo uma única vez.</li>
+        </ul>
+        <p>Você apaga tudo removendo a extensão ou limpando os dados dela em <code>chrome://extensions</code>.</p>
+
+        <h2>O que a extensão não faz</h2>
+        <ul>
+          <li>Não usa análise de uso, telemetria, anúncios nem rastreamento.</li>
+          <li>Não vende, aluga nem compartilha dados com ninguém.</li>
+          <li>Não carrega nem executa código remoto.</li>
+          <li>Não acessa nenhum site além de <code>https://claude.ai/*</code>.</li>
+        </ul>
+
+        <h2>Permissões</h2>
+        <ul>
+          <li><code>https://claude.ai/*</code>: mostrar o botão da Nuzi, ler e renomear seus artefatos no claude.ai.</li>
+          <li><code>storage</code>: guardar no seu navegador a estrutura, o histórico e as preferências.</li>
+          <li><code>sidePanel</code>: abrir a Nuzi no painel lateral do Chrome, se você escolher esse modo.</li>
+        </ul>
+
+        <h2>Mudanças e contato</h2>
+        <p>Se esta política mudar, a data no topo é atualizada e a mudança aparece nas notas da versão.</p>
+        <p>
+          Dúvidas sobre privacidade: abra uma conversa nas
+          <a href="https://github.com/henrique2m/nuzi-site/issues">Issues do site da Nuzi</a>.
+        </p>
+
+        <h2 lang="en">In English</h2>
+        <p lang="en">
+          Nuzi has no server and sends no data anywhere. It reads your artifact list (ID, title, type, dates, link,
+          thumbnail) from claude.ai through your existing session, only to display it, and reuses the app
+          identification headers claude.ai itself sends (never cookies or auth tokens), kept in session storage and
+          cleared when the browser closes. It changes only artifact names, after you confirm a preview. It stores locally
+          your folder structure, rename history, per-item icons, preferences and a count of organized items. No
+          analytics, no ads, no tracking, no remote code. Contact: the site's GitHub Issues.
+        </p>
+        <p>A Nuzi é um projeto independente, sem vínculo com a Anthropic. Claude e claude.ai são marcas da Anthropic.</p>
+      </article>
+    </main>
+
+    <footer>
+      <div class="wrap">
+        <nav aria-label="Rodapé">
+          <a href="../termos/">Termos de uso</a>
+          <a href="../marca/">Marca</a>
+          <a href="../apoiar/">Apoiar</a>
+          <a href="https://github.com/henrique2m/nuzi-site/issues">Suporte e ideias</a>
+        </nav>
+        <p>© 2026 Henrique Moreira</p>
+      </div>
+    </footer>
+  </body>
+</html>
