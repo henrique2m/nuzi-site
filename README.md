@@ -2,7 +2,7 @@
 
 Site público da **Nuzi**, a extensão para Chrome que organiza artefatos em pastas e tags gravando a organização no próprio nome. Publicado pelo GitHub Pages em `https://henrique2m.github.io/nuzi-site/`.
 
-**O código da extensão não está aqui**: ele fica num repositório privado. Este repositório tem só o site (apresentação, funcionalidades, política de privacidade, termos de uso, marca e a página de apoio).
+**O código da extensão não está aqui**: ele fica num repositório privado. Este repositório tem só o site (apresentação, funcionalidades, política de privacidade, termos de uso e a página de apoio).
 
 ## Páginas
 
@@ -11,8 +11,7 @@ Site público da **Nuzi**, a extensão para Chrome que organiza artefatos em pas
 | Início | `index.html` |
 | Política de privacidade | `privacidade/` |
 | Termos de uso | `termos/` |
-| Marca | `marca/` |
-| Apoiar (vale-token) | `apoiar/` |
+| Apoiar (cesto de tokens) | `apoiar/` |
 
 ## Suporte e ideias
 

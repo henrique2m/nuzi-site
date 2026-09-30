@@ -10,21 +10,39 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,500&display=swap" />
     <link rel="stylesheet" href="../assets/site.css" />
+    <script>
+      document.documentElement.classList.add('js');
+    </script>
+    <script src="../assets/site.js" defer></script>
   </head>
   <body>
+    <a class="skip" href="#conteudo">Pular para o conteúdo</a>
     <header class="top">
       <div class="wrap">
-        <a class="brand" href="../"><img src="../assets/img/logo.svg" alt="" /> Nuzi</a>
-        <nav aria-label="Páginas">
+        <a class="brand" href="../">
+          <svg class="brand-logo" viewBox="0 0 120 120" aria-hidden="true" focusable="false">
+            <path d="M14 32a10 10 0 0 1 10-10h21a8 8 0 0 1 6 2.6L56 30h40a10 10 0 0 1 10 10v52a10 10 0 0 1-10 10H24a10 10 0 0 1-10-10z" fill="#6E1F16" />
+            <g class="bl-t bl-1"><g transform="rotate(-12 47 41)"><rect x="30" y="24" width="34" height="34" rx="8" fill="#D8B894" /></g></g>
+            <g class="bl-t bl-2"><g transform="rotate(12 80 36)"><rect x="64" y="18" width="32" height="36" rx="8" fill="#C99D6E" /></g></g>
+            <g class="bl-t bl-3"><g transform="rotate(-3 62 32)"><rect x="44" y="12" width="36" height="40" rx="8" fill="#EAD7BF" /><path d="M49 18l4 2 7 .5-7 .5-4 2zM62 18l4 2 7 .5-7 .5-4 2zM50.5 28.5h5l-2 4-.5 7-.5-7zM58 30l4 2 7 .5-7 .5-4 2z" fill="#6E1F16" /></g></g>
+            <path d="M14 50a8 8 0 0 1 8-8h76a8 8 0 0 1 8 8v42a10 10 0 0 1-10 10H24a10 10 0 0 1-10-10z" fill="#B23A2B" />
+          </svg>
+          <span>Nuzi</span>
+        </a>
+        <button class="menu-btn" type="button" aria-expanded="false" aria-controls="menu" aria-label="Abrir o menu">
+          <span></span><span></span><span></span>
+        </button>
+        <nav class="menu" id="menu" aria-label="Páginas">
+          <a href="../#tabua">Como funciona</a>
           <a href="../#funcionalidades">Funcionalidades</a>
-          <a href="./" aria-current="page">Privacidade</a>
-          <a href="../marca/">Marca</a>
-          <a href="../apoiar/">Apoiar</a>
+          <a href="../privacidade/" aria-current="page">Privacidade</a>
+          <a class="nav-apoio" href="../apoiar/"><svg class="ico-cesto" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M3 9h18M5 9l1.6 10.2A2 2 0 0 0 8.6 21h6.8a2 2 0 0 0 2-1.8L19 9M9 9l2-5M15 9l-2-5M6.5 13.5h11M7.2 17h9.6" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>Cesto de tokens</a>
         </nav>
       </div>
+      <div class="progresso" aria-hidden="true"><span></span></div>
     </header>
 
-    <main class="wrap">
+    <main class="wrap" id="conteudo">
       <article class="prose" aria-labelledby="titulo">
         <span class="eyebrow">Última atualização: 30 de setembro de 2026</span>
         <h1 id="titulo" style="font-size: 48px">Política de privacidade</h1>
@@ -108,11 +126,11 @@
       </article>
     </main>
 
+    <div class="friso" aria-hidden="true"></div>
     <footer>
       <div class="wrap">
         <nav aria-label="Rodapé">
           <a href="../termos/">Termos de uso</a>
-          <a href="../marca/">Marca</a>
           <a href="../apoiar/">Apoiar</a>
           <a href="https://github.com/henrique2m/nuzi-site/issues">Suporte e ideias</a>
         </nav>

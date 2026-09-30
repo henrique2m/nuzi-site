@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg">
+  <!-- Motivos mesopotâmicos da Nuzi, desenhados para o site. Todos usam currentColor. -->
+
+  <!-- Cunha cuneiforme deitada: cabeça triangular e cauda que afina (igual à do símbolo). -->
+  <symbol id="cunha-h" viewBox="0 0 11 5">
+    <path d="M0 0l4 2 7 .5-7 .5-4 2z" fill="currentColor" />
+  </symbol>
+
+  <!-- Cunha em pé: a unidade dos números cuneiformes. -->
+  <symbol id="cunha-v" viewBox="0 0 5 11">
+    <path d="M0 0h5l-2 4-.5 7-.5-7z" fill="currentColor" />
+  </symbol>
+
+  <!-- Roseta de oito pétalas, motivo comum em selos e frisos. -->
+  <symbol id="rosa" viewBox="0 0 40 40">
+    <g fill="currentColor">
+      <ellipse cx="20" cy="9.5" rx="4" ry="8" />
+      <ellipse cx="20" cy="9.5" rx="4" ry="8" transform="rotate(45 20 20)" />
+      <ellipse cx="20" cy="9.5" rx="4" ry="8" transform="rotate(90 20 20)" />
+      <ellipse cx="20" cy="9.5" rx="4" ry="8" transform="rotate(135 20 20)" />
+      <ellipse cx="20" cy="9.5" rx="4" ry="8" transform="rotate(180 20 20)" />
+      <ellipse cx="20" cy="9.5" rx="4" ry="8" transform="rotate(225 20 20)" />
+      <ellipse cx="20" cy="9.5" rx="4" ry="8" transform="rotate(270 20 20)" />
+      <ellipse cx="20" cy="9.5" rx="4" ry="8" transform="rotate(315 20 20)" />
+    </g>
+    <circle cx="20" cy="20" r="4.2" fill="var(--motivo-miolo, #fff)" opacity=".55" />
+  </symbol>
+
+  <!-- Zigurate: três terraços de paredes inclinadas, escadaria central e templo no alto. -->
+  <symbol id="zigurate" viewBox="0 0 200 112">
+    <g fill="currentColor">
+      <path d="M8 112l12-32h160l12 32z" />
+      <path d="M38 80l9-24h106l9 24z" />
+      <path d="M64 56l7-18h58l7 18z" />
+      <path d="M84 38V24h32v14z" />
+    </g>
+    <g fill="var(--motivo-luz, #fff)" opacity=".28">
+      <path d="M93 112l3-56h8l3 56z" />
+      <path d="M22 86h156v2H22zM48 61h104v2H48zM72 43h56v2H72z" />
+      <path d="M96 30h8v8h-8z" />
+    </g>
+  </symbol>
+
+  <!-- Tamareira. -->
+  <symbol id="palmeira" viewBox="0 0 80 120">
+    <g fill="currentColor">
+      <path d="M37 120c1-26-1-52 1-76h4c2 24 0 50 1 76z" />
+      <path d="M40 44C30 30 14 28 2 36c12-2 24 1 36 11z" />
+      <path d="M40 44c10-14 26-16 38-8-12-2-24 1-36 11z" />
+      <path d="M40 44C34 28 22 18 8 18c12 4 22 14 30 28z" />
+      <path d="M40 44c6-16 18-26 32-26-12 4-22 14-30 28z" />
+      <path d="M40 44c-2-16 2-30 10-40-4 12-6 26-8 40z" />
+      <path d="M40 44C36 30 30 20 22 12c10 6 16 18 20 32z" />
+      <circle cx="35" cy="50" r="2.4" />
+      <circle cx="39" cy="53" r="2.4" />
+      <circle cx="44" cy="50" r="2.4" />
+    </g>
+    <g fill="var(--motivo-luz, #fff)" opacity=".22">
+      <path d="M38 60h5v2h-5zM38 72h5v2h-5zM38 84h5v2h-5zM38 96h5v2h-5zM38 108h5v2h-5z" />
+    </g>
+  </symbol>
+
+  <!-- Tábua de argila com linhas de escrita. -->
+  <symbol id="tabua" viewBox="0 0 36 44">
+    <rect x="1" y="1" width="34" height="42" rx="8" fill="currentColor" />
+    <g fill="var(--motivo-luz, #fff)" opacity=".45">
+      <path d="M7 10l4 2 7 .5-7 .5-4 2zM19 10l4 2 7 .5-7 .5-4 2zM7 20l4 2 7 .5-7 .5-4 2zM7 30l4 2 7 .5-7 .5-4 2zM21 20h5l-2 4-.5 7-.5-7z" />
+    </g>
+  </symbol>
+
+  <!-- Água em zigue-zague, borda dos frisos. -->
+  <symbol id="agua" viewBox="0 0 24 8">
+    <path d="M0 6l6-4 6 4 6-4 6 4v2l-6-4-6 4-6-4-6 4z" fill="currentColor" />
+  </symbol>
+
+  <!-- Estrela de oito pontas. -->
+  <symbol id="estrela" viewBox="0 0 40 40">
+    <path d="M20 2l3.5 11L34 6l-7 10.5L38 20l-11 3.5L34 34l-10.5-7L20 38l-3.5-11L6 34l7-10.5L2 20l11-3.5L6 6l10.5 7z" fill="currentColor" />
+  </symbol>
+</svg>

@@ -16,141 +16,302 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,500&display=swap" />
     <link rel="stylesheet" href="assets/site.css" />
+    <script>
+      document.documentElement.classList.add('js');
+    </script>
+    <script src="assets/site.js" defer></script>
   </head>
   <body>
+    <a class="skip" href="#conteudo">Pular para o conteúdo</a>
     <header class="top">
       <div class="wrap">
-        <a class="brand" href="./"><img src="assets/img/logo.svg" alt="" /> Nuzi</a>
-        <nav aria-label="Páginas">
+        <a class="brand" href="./">
+          <svg class="brand-logo" viewBox="0 0 120 120" aria-hidden="true" focusable="false">
+            <path d="M14 32a10 10 0 0 1 10-10h21a8 8 0 0 1 6 2.6L56 30h40a10 10 0 0 1 10 10v52a10 10 0 0 1-10 10H24a10 10 0 0 1-10-10z" fill="#6E1F16" />
+            <g class="bl-t bl-1"><g transform="rotate(-12 47 41)"><rect x="30" y="24" width="34" height="34" rx="8" fill="#D8B894" /></g></g>
+            <g class="bl-t bl-2"><g transform="rotate(12 80 36)"><rect x="64" y="18" width="32" height="36" rx="8" fill="#C99D6E" /></g></g>
+            <g class="bl-t bl-3"><g transform="rotate(-3 62 32)"><rect x="44" y="12" width="36" height="40" rx="8" fill="#EAD7BF" /><path d="M49 18l4 2 7 .5-7 .5-4 2zM62 18l4 2 7 .5-7 .5-4 2zM50.5 28.5h5l-2 4-.5 7-.5-7zM58 30l4 2 7 .5-7 .5-4 2z" fill="#6E1F16" /></g></g>
+            <path d="M14 50a8 8 0 0 1 8-8h76a8 8 0 0 1 8 8v42a10 10 0 0 1-10 10H24a10 10 0 0 1-10-10z" fill="#B23A2B" />
+          </svg>
+          <span>Nuzi</span>
+        </a>
+        <button class="menu-btn" type="button" aria-expanded="false" aria-controls="menu" aria-label="Abrir o menu">
+          <span></span><span></span><span></span>
+        </button>
+        <nav class="menu" id="menu" aria-label="Páginas">
+          <a href="#tabua">Como funciona</a>
           <a href="#funcionalidades">Funcionalidades</a>
           <a href="privacidade/">Privacidade</a>
-          <a href="marca/">Marca</a>
-          <a href="apoiar/">Apoiar</a>
+          <a class="nav-apoio" href="apoiar/"><svg class="ico-cesto" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M3 9h18M5 9l1.6 10.2A2 2 0 0 0 8.6 21h6.8a2 2 0 0 0 2-1.8L19 9M9 9l2-5M15 9l-2-5M6.5 13.5h11M7.2 17h9.6" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>Cesto de tokens</a>
         </nav>
       </div>
+      <div class="progresso" aria-hidden="true"><span></span></div>
     </header>
 
-    <main class="wrap">
-      <section class="hero" aria-labelledby="titulo">
-        <div style="display: flex; flex-direction: column; gap: 22px">
-          <span class="eyebrow">Extensão gratuita para o Chrome</span>
-          <h1 id="titulo">O arquivo pessoal dos seus artefatos do claude.ai.</h1>
-          <p class="lede">
+    <main id="conteudo">
+      <!-- ============ Capa ============ -->
+      <section class="hero wrap" id="inicio" data-nav="Início" aria-labelledby="titulo">
+        <div class="hero-text">
+          <span class="eyebrow" data-reveal>Extensão gratuita para o Chrome</span>
+          <h1 id="titulo" data-reveal>O arquivo pessoal dos seus artefatos do claude.ai.</h1>
+          <p class="lede" data-reveal>
             Dezenas de artefatos e projetos numa lista só? A Nuzi dá a cada um um lugar e uma etiqueta: projetos,
             subpastas e tags, gravados no próprio nome.
           </p>
-          <div class="actions">
+          <div class="actions" data-reveal>
             <a class="btn btn-primary" aria-disabled="true" role="link">Em breve na Chrome Web Store</a>
-            <a class="btn" href="#como-funciona">Como funciona</a>
+            <a class="btn" href="#tabua">Experimente aqui</a>
           </div>
-          <p class="note">Sem servidor, sem conta, nada sai do seu navegador.</p>
+          <p class="note" data-reveal>Sem servidor, sem conta, nada sai do seu navegador.</p>
         </div>
-        <img
-          class="shot"
-          src="assets/screens/01-lista.png"
-          width="1280"
-          height="800"
-          alt="A Nuzi aberta: pastas à esquerda (Atlas, Estudos, Orbita) e os itens da pasta Atlas à direita."
-        />
+
+        <button class="scene" type="button" aria-label="Guardar as tábuas de novo (animação)">
+          <svg viewBox="0 0 520 440" aria-hidden="true" focusable="false">
+            <circle class="sc-sol" cx="392" cy="132" r="92" />
+            <g class="sc-far" data-depth="6">
+              <use href="assets/img/motivos.svg#zigurate" x="-6" y="262" width="300" height="168" class="sc-zig" />
+            </g>
+            <g class="sc-mid" data-depth="12">
+              <use href="assets/img/motivos.svg#palmeira" x="424" y="226" width="96" height="190" class="sc-palma" />
+              <use href="assets/img/motivos.svg#palmeira" x="28" y="300" width="62" height="118" class="sc-palma" />
+            </g>
+            <path class="sc-chao" d="M0 412h520" />
+
+            <g transform="translate(134 146) scale(2.6)">
+              <path
+                d="M14 32a10 10 0 0 1 10-10h21a8 8 0 0 1 6 2.6L56 30h40a10 10 0 0 1 10 10v52a10 10 0 0 1-10 10H24a10 10 0 0 1-10-10z"
+                fill="#6E1F16"
+              />
+              <g class="tb tb-1"><g class="tb-lift"><g transform="rotate(-12 47 41)">
+                <rect x="30" y="24" width="34" height="34" rx="8" fill="#D8B894" />
+                <path d="M36 31l4 2 7 .5-7 .5-4 2z" fill="#B08A63" />
+              </g></g></g>
+              <g class="tb tb-2"><g class="tb-lift"><g transform="rotate(12 80 36)">
+                <rect x="64" y="18" width="32" height="36" rx="8" fill="#C99D6E" />
+                <path d="M78 24h5l-2 4-.5 7-.5-7z" fill="#8E6A45" />
+              </g></g></g>
+              <g class="tb tb-3"><g class="tb-lift"><g transform="rotate(-3 62 32)">
+                <rect x="44" y="12" width="36" height="40" rx="8" fill="#EAD7BF" />
+                <g fill="#6E1F16">
+                  <path class="wd" style="--i: 0" d="M49 18l4 2 7 .5-7 .5-4 2z" />
+                  <path class="wd" style="--i: 1" d="M62 18l4 2 7 .5-7 .5-4 2z" />
+                  <path class="wd" style="--i: 2" d="M73.5 16.5h5l-2 4-.5 7-.5-7z" />
+                  <path class="wd" style="--i: 3" d="M50.5 28.5h5l-2 4-.5 7-.5-7z" />
+                  <path class="wd" style="--i: 4" d="M58 30l4 2 7 .5-7 .5-4 2z" />
+                  <path class="wd" style="--i: 5" d="M58 36.5l3.2 1.6 5.6.4-5.6.4-3.2 1.6z" />
+                </g>
+              </g></g></g>
+              <path
+                d="M14 50a8 8 0 0 1 8-8h76a8 8 0 0 1 8 8v42a10 10 0 0 1-10 10H24a10 10 0 0 1-10-10z"
+                fill="#B23A2B"
+              />
+              <g class="poeira" fill="#D8B894">
+                <circle cx="24" cy="46" r="2" style="--dx: -10px; --dy: -8px" />
+                <circle cx="34" cy="44" r="1.4" style="--dx: -6px; --dy: -12px" />
+                <circle cx="86" cy="44" r="1.6" style="--dx: 7px; --dy: -11px" />
+                <circle cx="98" cy="46" r="2" style="--dx: 11px; --dy: -7px" />
+              </g>
+            </g>
+          </svg>
+          <span class="scene-dica" aria-hidden="true">Toque na pasta</span>
+        </button>
       </section>
 
-      <section id="como-funciona" aria-labelledby="como">
-        <span class="eyebrow">Como funciona</span>
-        <h2 id="como" style="font-size: 40px">A organização mora no nome</h2>
-        <p class="lede">
-          Em vez de um banco de dados, a Nuzi escreve a pasta no nome do artefato. Por isso ela sincroniza entre
-          dispositivos e continua valendo mesmo sem a extensão.
-        </p>
-        <div class="names" role="figure" aria-label="Exemplos de nomes organizados">
-          <span
-            ><span class="seg-p">Projeto</span> / <span class="seg-s">Subpasta</span> /
-            <span class="seg-t">Título</span> <span class="muted">#tag</span></span
-          >
-          <span
-            ><span class="seg-p">Atlas</span> / <span class="seg-s">Pesquisa</span> /
-            <span class="seg-t">Mapa de concorrentes</span> <span class="muted">#revisão</span></span
-          >
-          <span><span class="seg-p">Orbita</span> / <span class="seg-t">Painel de vendas</span></span>
-          <span class="muted">Anotações da reunião → sem pasta</span>
+      <div class="friso" aria-hidden="true"></div>
+
+      <!-- ============ Demonstração ============ -->
+      <section class="wrap" id="tabua" data-nav="Como funciona" aria-labelledby="como">
+        <div class="sec-head">
+          <span class="eyebrow" data-reveal>Como funciona</span>
+          <h2 id="como" data-reveal>A organização mora no nome</h2>
+          <p class="lede" data-reveal>
+            Em vez de um banco de dados, a Nuzi escreve a pasta no nome do artefato. Por isso ela sincroniza entre
+            dispositivos e continua valendo mesmo sem a extensão. Escreva uma tábua e guarde no arquivo:
+          </p>
+        </div>
+
+        <div class="demo" data-reveal>
+          <form class="demo-form" id="demo-form" autocomplete="off">
+            <div class="presets" role="group" aria-label="Exemplos">
+              <button type="button" class="chip" data-preset="Atlas|Pesquisa|Mapa de concorrentes|revisão">Atlas / Pesquisa</button>
+              <button type="button" class="chip" data-preset="Orbita||Painel de vendas|">Orbita</button>
+              <button type="button" class="chip" data-preset="Estudos|Grego|Verbos irregulares|estudo">Estudos / Grego</button>
+              <button type="button" class="chip" data-preset="||Anotações da reunião|">Sem pasta</button>
+            </div>
+            <label>Projeto <input name="p" value="Atlas" maxlength="28" placeholder="Opcional" /></label>
+            <label>Subpasta <input name="s" value="Pesquisa" maxlength="28" placeholder="Opcional" /></label>
+            <label>Título <input name="t" value="Mapa de concorrentes" maxlength="48" required /></label>
+            <label>Tag <input name="g" value="revisão" maxlength="20" placeholder="Opcional" /></label>
+          </form>
+
+          <div class="demo-tabua-area">
+            <div class="demo-tabua" id="demo-tabua">
+              <span class="demo-rotulo">Nome no claude.ai</span>
+              <p class="demo-nome" id="demo-nome"></p>
+            </div>
+            <p class="demo-dica" id="demo-dica"></p>
+            <button type="submit" form="demo-form" class="btn btn-primary">Guardar no arquivo</button>
+          </div>
+
+          <div class="demo-arquivo">
+            <span class="demo-rotulo">Seu arquivo na Nuzi</span>
+            <ul class="arvore" id="arvore"></ul>
+            <p class="sr-only" id="demo-aviso" role="status"></p>
+          </div>
         </div>
       </section>
 
-      <section id="funcionalidades" aria-labelledby="func">
-        <span class="eyebrow">Funcionalidades</span>
-        <h2 id="func" style="font-size: 40px">Tudo o que a lista não faz</h2>
-        <div class="cards">
-          <div class="card">
-            <h3>Encontrar</h3>
+      <div class="friso" aria-hidden="true"></div>
+
+      <!-- ============ Funcionalidades ============ -->
+      <section class="wrap" id="funcionalidades" data-nav="Funcionalidades" aria-labelledby="func">
+        <div class="sec-head">
+          <span class="eyebrow" data-reveal>Funcionalidades</span>
+          <h2 id="func" data-reveal>Tudo o que a lista não faz</h2>
+        </div>
+
+        <div class="abas" data-reveal>
+          <div class="abas-lista" role="tablist" aria-label="Funcionalidades">
+            <button role="tab" id="aba-1" aria-controls="painel-1" aria-selected="true"><span class="cnum" data-n="1"></span>Encontrar</button>
+            <button role="tab" id="aba-2" aria-controls="painel-2" aria-selected="false" tabindex="-1"><span class="cnum" data-n="2"></span>Organizar</button>
+            <button role="tab" id="aba-3" aria-controls="painel-3" aria-selected="false" tabindex="-1"><span class="cnum" data-n="3"></span>Com segurança</button>
+            <button role="tab" id="aba-4" aria-controls="painel-4" aria-selected="false" tabindex="-1"><span class="cnum" data-n="4"></span>Do seu jeito</button>
+          </div>
+
+          <div class="painel" role="tabpanel" id="painel-1" aria-labelledby="aba-1">
             <ul>
               <li>Artefatos publicados e projetos do Claude Design juntos</li>
               <li>Árvore de pastas com contagens</li>
               <li>Busca sem acentos, filtros por tipo e tag</li>
               <li>Lista ou grade com prévias</li>
             </ul>
+            <img class="shot" src="assets/screens/01-lista.png" width="1280" height="800" alt="A Nuzi aberta: pastas à esquerda e os itens da pasta Atlas à direita." />
           </div>
-          <div class="card">
-            <h3>Organizar</h3>
+          <div class="painel" role="tabpanel" id="painel-2" aria-labelledby="aba-2" hidden>
             <ul>
               <li>Mover vários itens de uma vez</li>
               <li>Arrastar direto para a pasta</li>
               <li>Renomear uma pasta inteira</li>
               <li>Descrição, ícone e cor por pasta</li>
             </ul>
+            <img class="shot" src="assets/screens/04-pasta.png" width="1280" height="800" loading="lazy" alt="Uma pasta aberta com seus itens organizados." />
           </div>
-          <div class="card">
-            <h3>Com segurança</h3>
+          <div class="painel" role="tabpanel" id="painel-3" aria-labelledby="aba-3" hidden>
             <ul>
               <li>Pré-visualização "nome atual → nome novo"</li>
               <li>Um item por vez, conferido depois</li>
               <li>Histórico com desfazer</li>
             </ul>
+            <img class="shot" src="assets/screens/03-mover.png" width="1280" height="800" loading="lazy" alt="Diálogo Mover 3 itens mostrando o nome atual e o nome novo de cada item antes de renomear." />
           </div>
-          <div class="card">
-            <h3>Do seu jeito</h3>
+          <div class="painel" role="tabpanel" id="painel-4" aria-labelledby="aba-4" hidden>
             <ul>
               <li>Modal, painel lateral ou janela própria</li>
               <li>Tema claro e escuro</li>
               <li>Teclado completo e leitores de tela</li>
             </ul>
+            <img class="shot" src="assets/screens/02-grade.png" width="1280" height="800" loading="lazy" alt="Visualização em grade, no tema escuro, com a prévia de cada artefato." />
           </div>
         </div>
-        <div class="shots">
-          <figure>
-            <img class="shot" src="assets/screens/02-grade.png" width="1280" height="800" alt="Visualização em grade, no tema escuro, com a prévia de cada artefato." />
-            <figcaption>Grade com prévias, no tema escuro.</figcaption>
-          </figure>
-          <figure>
-            <img class="shot" src="assets/screens/03-mover.png" width="1280" height="800" alt="Diálogo Mover 3 itens mostrando o nome atual e o nome novo de cada item antes de renomear." />
-            <figcaption>Antes de gravar, você vê o nome atual e o nome novo.</figcaption>
-          </figure>
-        </div>
       </section>
 
-      <section aria-labelledby="priv">
-        <span class="eyebrow">Privacidade</span>
-        <h2 id="priv" style="font-size: 40px">Nada sai do seu navegador</h2>
-        <div class="cards">
-          <div class="card"><h3>Sem servidor</h3><p>Sem conta, sem telemetria, sem anúncios.</p></div>
-          <div class="card"><h3>Sem credenciais</h3><p>A Nuzi nunca lê nem guarda senhas, cookies ou tokens.</p></div>
-          <div class="card"><h3>Só o nome</h3><p>Ela altera apenas o nome dos seus artefatos, e só quando você confirma.</p></div>
+      <div class="friso" aria-hidden="true"></div>
+
+      <!-- ============ Por que Nuzi ============ -->
+      <section class="wrap" id="historia" data-nav="Por que Nuzi" aria-labelledby="hist">
+        <div class="sec-head">
+          <span class="eyebrow" data-reveal>Por que Nuzi</span>
+          <h2 id="hist" data-reveal>Um arquivo de família, há 3.400 anos</h2>
+          <p class="lede" data-reveal>Vire as tábuas.</p>
         </div>
-        <p><a href="privacidade/">Leia a política de privacidade completa</a></p>
+        <ol class="linha">
+          <li data-reveal>
+            <button class="vira" type="button" aria-pressed="false">
+              <span class="face frente">
+                <span class="data">c. 1450 a.C.</span><span class="tit">A cidade</span>
+                <svg class="ico" viewBox="0 0 200 112" aria-hidden="true"><use href="assets/img/motivos.svg#zigurate" /></svg>
+              </span>
+              <span class="face verso">Nuzi era uma cidade da Mesopotâmia, perto da atual Kirkuk, no Iraque. Contratos, terras e heranças eram escritos em tábuas de argila.</span>
+            </button>
+          </li>
+          <li data-reveal>
+            <button class="vira" type="button" aria-pressed="false">
+              <span class="face frente">
+                <span class="data">Em casa</span><span class="tit">O arquivo</span>
+                <svg class="ico" viewBox="0 0 36 44" aria-hidden="true"><use href="assets/img/motivos.svg#tabua" /></svg>
+              </span>
+              <span class="face verso">As famílias guardavam as próprias tábuas em casa, em lotes identificados, para achar o que precisavam sem abrir tudo.</span>
+            </button>
+          </li>
+          <li data-reveal>
+            <button class="vira" type="button" aria-pressed="false">
+              <span class="face frente">
+                <span class="data">1925–1931</span><span class="tit">A descoberta</span>
+                <svg class="ico" viewBox="0 0 40 40" aria-hidden="true"><use href="assets/img/motivos.svg#rosa" /></svg>
+              </span>
+              <span class="face verso">Escavações encontraram milhares dessas tábuas, muitas ainda guardadas nas casas das famílias. Um arquivo pessoal que atravessou os séculos.</span>
+            </button>
+          </li>
+          <li data-reveal>
+            <button class="vira" type="button" aria-pressed="false">
+              <span class="face frente">
+                <span class="data">Hoje</span><span class="tit">Seus artefatos</span>
+                <img class="ico" src="assets/img/logo.svg" alt="" width="64" height="64" />
+              </span>
+              <span class="face verso">A Nuzi dá o mesmo cuidado aos seus artefatos: cada um no seu cesto, com etiqueta, fácil de achar.</span>
+            </button>
+          </li>
+        </ol>
       </section>
 
-      <section aria-labelledby="apoio">
-        <span class="eyebrow">Apoio</span>
-        <h2 id="apoio" style="font-size: 40px">Aceitamos vale-token</h2>
-        <p class="lede">A Nuzi é gratuita. Se ela te poupou tempo, seu vale-token vira tokens de IA para criarmos coisas incríveis.</p>
-        <p><a class="btn btn-primary" href="apoiar/">Mandar um vale-token</a></p>
+      <div class="friso" aria-hidden="true"></div>
+
+      <!-- ============ Privacidade ============ -->
+      <section class="wrap" id="privacidade" data-nav="Privacidade" aria-labelledby="priv">
+        <div class="sec-head">
+          <span class="eyebrow" data-reveal>Privacidade</span>
+          <h2 id="priv" data-reveal>Nada sai do seu navegador</h2>
+        </div>
+        <div class="selos">
+          <div class="selo" data-reveal>
+            <span class="selo-marca" aria-hidden="true"><svg viewBox="0 0 40 40"><use href="assets/img/motivos.svg#rosa" /></svg></span>
+            <h3>Sem servidor</h3>
+            <p>Sem conta, sem telemetria, sem anúncios.</p>
+          </div>
+          <div class="selo" data-reveal>
+            <span class="selo-marca" aria-hidden="true"><svg viewBox="0 0 40 40"><use href="assets/img/motivos.svg#estrela" /></svg></span>
+            <h3>Sem credenciais</h3>
+            <p>A Nuzi nunca lê nem guarda senhas, cookies ou tokens.</p>
+          </div>
+          <div class="selo" data-reveal>
+            <span class="selo-marca" aria-hidden="true"><svg viewBox="0 0 36 44"><use href="assets/img/motivos.svg#tabua" /></svg></span>
+            <h3>Só o nome</h3>
+            <p>Ela altera apenas o nome dos seus artefatos, e só quando você confirma.</p>
+          </div>
+        </div>
+        <p data-reveal><a href="privacidade/">Leia a política de privacidade completa</a></p>
+      </section>
+
+      <!-- ============ Apoio ============ -->
+      <section class="wrap apoio" id="apoio" data-nav="Apoio" aria-labelledby="apoio-tit">
+        <div class="apoio-texto">
+          <span class="eyebrow" data-reveal>Apoio</span>
+          <h2 id="apoio-tit" data-reveal>Encha o cesto de tokens</h2>
+          <p class="lede" data-reveal>
+            A Nuzi é gratuita. Se ela te poupou tempo, seu apoio vai para o cesto de tokens de IA que usamos para criar coisas incríveis.
+          </p>
+          <p data-reveal><a class="btn btn-primary" href="apoiar/">Encher o cesto</a></p>
+        </div>
+        <div class="cesto-palco" data-cesto data-reveal></div>
       </section>
     </main>
 
+    <div class="friso" aria-hidden="true"></div>
     <footer>
       <div class="wrap">
         <nav aria-label="Rodapé">
           <a href="privacidade/">Privacidade</a>
           <a href="termos/">Termos de uso</a>
-          <a href="marca/">Marca</a>
           <a href="apoiar/">Apoiar</a>
           <a href="https://github.com/henrique2m/nuzi-site/issues">Suporte e ideias</a>
         </nav>
