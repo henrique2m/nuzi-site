@@ -6,10 +6,11 @@
 
 <p align="center">
   <strong>O arquivo pessoal dos seus artefatos do claude.ai.</strong><br />
-  Extensão gratuita para o Chrome · em breve na Chrome Web Store
+  Extensão gratuita para o Chrome · <a href="https://chromewebstore.google.com/detail/hfbdeilgpgijfpieddeolkdeidgphkol">instale na Chrome Web Store</a>
 </p>
 
 <p align="center">
+  <a href="https://chromewebstore.google.com/detail/hfbdeilgpgijfpieddeolkdeidgphkol"><strong>Instalar</strong></a> ·
   <a href="https://henrique2m.github.io/nuzi-site/">Site</a> ·
   <a href="https://henrique2m.github.io/nuzi-site/#tabua">Como funciona</a> ·
   <a href="https://henrique2m.github.io/nuzi-site/privacidade/">Privacidade</a> ·

@@ -227,7 +227,7 @@ img {
   background: var(--sunken);
 }
 /* Página ou seção atual: uma cunha sob o link. */
-.menu a:not(.nav-apoio)::after {
+.menu a:not(.nav-apoio):not(.nav-instalar)::after {
   content: '';
   position: absolute;
   left: 50%;
@@ -271,6 +271,20 @@ img {
 }
 .nav-apoio:hover .ico-cesto {
   transform: rotate(-10deg) translateY(-1px);
+}
+/* Instalar: a ação principal, cheia de tijolo. */
+.nav-instalar {
+  margin-left: 6px;
+  background: var(--brick);
+  color: var(--on-brick) !important;
+  font-weight: 600;
+  padding: 0 18px !important;
+  border-radius: 999px !important;
+  transition: background 0.2s, transform 0.2s var(--mola) !important;
+}
+.nav-instalar:hover {
+  background: #9a2f22 !important;
+  transform: translateY(-1px);
 }
 
 /* Linha de progresso da leitura, com uma cunha na ponta. */
@@ -405,12 +419,13 @@ img {
   .js .top.aberto .menu a:nth-child(4) {
     transition-delay: 0.12s;
   }
-  .menu a:not(.nav-apoio)::after {
+  .menu a:not(.nav-apoio):not(.nav-instalar)::after {
     left: 0;
     bottom: 50%;
     margin: 0 0 -3px;
   }
-  .nav-apoio {
+  .nav-apoio,
+  .nav-instalar {
     margin: 6px 0 0;
     justify-content: center;
   }
